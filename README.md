@@ -1,7 +1,5 @@
-# HSPC Deep learning
-
 <p align="center">
-    <em>Deep learning modeling for hspc </em>
+    <em> Advanced Deep Learning Enables Predicition of HSC Mobilization Success </em>
 </p>
 
 ## Project Description
