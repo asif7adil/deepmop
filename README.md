@@ -2,12 +2,13 @@
     <em> Advanced Deep Learning Enables Predicition of HSC Mobilization Success </em>
 </p>
 
-## Project Description
+## Abstract
 
-This project aims to develop deep learning models for predicting the HSPC mobilization response to G-CSF treatment. 
+Hematopoietic stem and progenitor cells (HSPC) transplantation offers a potentially curative therapy for aggressive hematologic malignancies and bone marrow failure syndromes. Effective mobilization of donor CD34+ cells underpins successful HSPC transplantation, yet some healthy donors fail to achieve adequate CD34⁺ yields despite standard granulocyte colony‑stimulating factor (G‑CSF)-based regimens. Early identification of donors who face challenges with mobilization offers opportunities to intervene, and will likely lead to better overall transplantation outcomes and reduced healthcare costs. Here we analyze demographic and pre‑ and post‑G‑CSF laboratory data from 1,160 healthy donors from across multiple institutions, developing two complementary machine‑learning frameworks to predict mobilization outcome. A transformer‑based probabilistic model (TabPFN) trained on baseline complete blood counts (CBCs) rigorously discriminates poor from good mobilizers. Application of the same architecture to donor data after mobilization attains near‑perfect discrimination. To unify the predictive model across time points, we introduce an attention‑aware neural network framework that ingests either baseline or post‑mobilization data via a “lab‑type” context flag, enabling accurate prediction of poor mobilizers both before and after GCSF mobilization. We further validated the enhanced framework on data from over 19,000 healthy donors compiled by the Center for International Blood and Marrow Transplant Research. These interpretable models enable early donor triage and “just-in-time” rescue interventions, providing a data driven foundation for personalized donor mobilization strategies.
+
 ## Environment Setup
 
-As this project contains both R and Python code, we will use conda to manage the environment. The `environment.yml` file contains the necessary packages for both languages.
+We will use conda to manage environment. The `environment.yml` file contains the necessary packages.
 
 ### Python
 
@@ -38,85 +39,3 @@ conda install -n hspc package_name
 ```
 
 And then record the new package in the `environment.yml` file manually.
-
-### R
-
-For R, we will use the `renv` package to manage the environment. The `renv.lock` file contains the necessary packages for R.
-
-To restore the R environment, run the following command:
-
-```R
-renv::restore()
-```
-
-When you run the `renv::restore()` command, it will create a new environment with the necessary packages. You can activate the environment by running the following command:
-
-```R
-renv::activate()
-```
-
-Furthermore, running R console from the project root will automatically activate the environment.
-
-To install the necessary packages, run the following command:
-
-```R
-renv::install("package_name")
-```
-
-To save the environment, run the following command:
-
-```R
-renv::snapshot()
-```
-
-This will update the `renv.lock` file with the new packages.
-
-
-## Project Organization
-
-```
-├── LICENSE            <- Open-source license if one is chosen
-├── Makefile           <- Makefile with convenience commands like `make create_environment` or `make requirements`
-├── README.md          <- The top-level README for developers using this project.
-├── data
-│   ├── external       <- Data from third party sources.
-│   ├── interim        <- Intermediate data that has been transformed.
-│   ├── processed      <- The final, canonical data sets for processing.
-│   └── raw            <- The original, immutable data dump.
-│
-├── docs               <- A default mkdocs project; see mkdocs.org for details
-│
-├── notebooks          <- Jupyter or Quarto notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`.
-│
-├── pyproject.toml     <- Project configuration file with package metadata for hspc.
-│                         and configuration for tools like ruff.
-│
-├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-│
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
-│
-├── environment.yml   <- The requirements file for reproducing the analysis environment.
-│
-└── hspc                <- Source code for use in this project.
-    │
-    ├── __init__.py    <- Makes hspc a Python module
-    │
-    ├── data           <- Scripts to process data
-    │   └── make_dataset.py
-    │
-    └── visualization  <- Scripts to create exploratory and results oriented visualizations
-        └── visualize.py
-```
-
----
-
-## Contributing
-
-As this is a collaborative project, we encourage the use of separate branches for each new feature or bug fix. Once the feature or bug fix is complete, a pull request can be opened to merge the changes into the main branch.
-
----
-
-<small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">Cookiecutter Data Science project template</a>. #cookiecutterdatascience</small>
