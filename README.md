@@ -13,11 +13,11 @@ Hematopoietic stem and progenitor cells (HSPC) transplantation offers a potentia
 
 ## Environment Setup
 
-We will use conda to manage environment. The `environment.yml` file contains the necessary packages.
+We have used conda to manage environment. The `environment.yml` file contains the necessary packages.
 
 ### Python
 
-We're primarily using Makefile to manage the environment and requirements. The `Makefile` contains the necessary commands to create the environment and install the requirements.
+We have primarily used Makefile to manage the environment and requirements. The `Makefile` contains the necessary commands to create the environment and install the requirements.
 
 To create the environment, run the following command:
 
