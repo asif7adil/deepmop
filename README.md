@@ -46,4 +46,4 @@ conda install -n hspc package_name
 And then record the new package in the `environment.yml` file manually.
 
 #### Paper Link
-Read the preprint [here](https://doi.org/10.1101/2025.09.17.676674)
+[BioRxiv Pre-Print](https://doi.org/10.1101/2025.09.17.676674)
